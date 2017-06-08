@@ -11949,7 +11949,23 @@ regression trees and how to interpret these models</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Regression-Trees-(Numerical-data)">Regression Trees (Numerical data)<a class="anchor-link" href="#Regression-Trees-(Numerical-data)">&#194;&#182;</a></h1><p><img src="img/dt_reg_0.png" alt="title"></p>
+<h1 id="We-have-seen-what-a-decision-Tree-for-categorical-data-is.">We have seen what a decision Tree for categorical data is.<a class="anchor-link" href="#We-have-seen-what-a-decision-Tree-for-categorical-data-is.">&#194;&#182;</a></h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="=&gt;-Let-now-see-what-a-Regression-Tree-is-(Numerical-Data)">=&gt; Let now see what a Regression Tree is (Numerical Data)<a class="anchor-link" href="#=&gt;-Let-now-see-what-a-Regression-Tree-is-(Numerical-Data)">&#194;&#182;</a></h1>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Regression-Trees-(Numerical-data)">Regression Trees (Numerical data)<a class="anchor-link" href="#Regression-Trees-(Numerical-data)">&#194;&#182;</a></h1><p><img src="./img/dt_reg_0.png" alt="title"></p>
 
 </div>
 </div>
@@ -11992,6 +12008,22 @@ regression trees and how to interpret these models</li>
 </div>
 </div>
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="We-now-have-seen-decision-Trees-with-both-categorical-and-numerical-data.">We now have seen decision Trees with both categorical and numerical data.<a class="anchor-link" href="#We-now-have-seen-decision-Trees-with-both-categorical-and-numerical-data.">&#194;&#182;</a></h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="=&gt;-Let's-build-one!">=&gt; Let's build one!<a class="anchor-link" href="#=&gt;-Let's-build-one!">&#194;&#182;</a></h1>
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12048,12 +12080,19 @@ regression trees and how to interpret these models</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Information-Gain">Information Gain<a class="anchor-link" href="#Information-Gain">&#194;&#182;</a></h1><p><br></p>
-<h2 id="=&gt;-Tells-us-how-important-a-given-attribute-of-the-feature-vectors-is">=&gt; Tells us how important a given attribute of the feature vectors is<a class="anchor-link" href="#=&gt;-Tells-us-how-important-a-given-attribute-of-the-feature-vectors-is">&#194;&#182;</a></h2><p><br>
-Information Gain = entropy(parent) – [mean(entropy(children))]</p>
+<h2 id="=&gt;-Tells-us-how-important-a-given-attribute-of-the-feature-vectors-is">=&gt; Tells us how important a given attribute of the feature vectors is<a class="anchor-link" href="#=&gt;-Tells-us-how-important-a-given-attribute-of-the-feature-vectors-is">&#194;&#182;</a></h2><p><br></p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Information-Gain-=-entropy(parent)-&#8211;-[mean(entropy(children))]">Information Gain = entropy(parent) &#8211; [mean(entropy(children))]<a class="anchor-link" href="#Information-Gain-=-entropy(parent)-&#8211;-[mean(entropy(children))]">&#194;&#182;</a></h4>
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12130,30 +12169,12 @@ Information Gain = entropy(parent) – [mean(entropy(children))]</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Building-a-Decision-Tree:-(pseudocode)">Building a Decision Tree: (pseudocode)<a class="anchor-link" href="#Building-a-Decision-Tree:-(pseudocode)">&#194;&#182;</a></h1><h2 id="Splitting-algorithm:">Splitting algorithm:<a class="anchor-link" href="#Splitting-algorithm:">&#194;&#182;</a></h2><ol>
-<li>calculate the information gain for every possible split </li>
-<li>select the split that has the highest information gain</li>
-</ol>
-<h2 id="Possible-splits:">Possible splits:<a class="anchor-link" href="#Possible-splits:">&#194;&#182;</a></h2><ul>
-<li>for categorical features:
-variable = value (or !=) </li>
-<li>for continuous features:
-variable &lt;= threshold (or &gt;)</li>
-</ul>
-<h2 id="If-subset-is-pure:-STOP-else-recursively-call-the-algorithm-again-on-the-child-node">If subset is pure: STOP else recursively call the algorithm again on the child node<a class="anchor-link" href="#If-subset-is-pure:-STOP-else-recursively-call-the-algorithm-again-on-the-child-node">&#194;&#182;</a></h2>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Review">Review<a class="anchor-link" href="#Review">&#194;&#182;</a></h1><ul>
 <li>Describe a Decision Tree</li>
 <li>How does one interpret the tree?</li>
+<li>Explain strengths and weaknesses of DTs</li>
 <li>How does one create the tree?</li>
 <li>Explain Information Gain</li>
-<li>Explain strengths and weaknesses of DTs</li>
 </ul>
 
 </div>
